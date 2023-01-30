@@ -1,0 +1,27 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { CataloguePage } from './pages/catalogue/catalogue.page';
+import { LoginPage } from './pages/login/login.page';
+import { TrainerPage } from './pages/trainer/trainer.page';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: LoginPage,
+  },
+  {
+    path: 'trainer',
+    component: TrainerPage,
+  },
+  {
+    path: 'catalogue',
+    component: CataloguePage,
+  },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)], //import module
+
+  exports: [RouterModule], // expose module and its features
+})
+export class AppRoutingModule {}
