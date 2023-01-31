@@ -5,11 +5,19 @@ import { LoginPage } from './pages/login/login.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { TrainerPage } from './pages/trainer/trainer.page';
 import { AppRoutingModule } from './app-routing.model';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Decorator
 @NgModule({
-  declarations: [AppComponent, LoginPage, CataloguePage, TrainerPage],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    LoginPage,
+    CataloguePage,
+    TrainerPage,
+    LoginFormComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
