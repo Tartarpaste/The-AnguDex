@@ -17,9 +17,10 @@ export class LoginFormComponent {
     const {username} = loginForm.value
 
     this.loginService.login(username).subscribe({
+      //? If it goes well it will go to the "next" property
       next: (user: Trainer) => {
 
-      },
+      }, //? It will pass to error if something goes wrong
       error: () => {
 
       }
