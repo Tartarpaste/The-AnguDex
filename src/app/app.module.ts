@@ -7,6 +7,8 @@ import { TrainerPage } from './pages/trainer/trainer.page';
 import { AppRoutingModule } from './app-routing.model';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 
 // Decorator
 @NgModule({
@@ -16,8 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     CataloguePage,
     TrainerPage,
     LoginFormComponent,
+    PokemonListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
