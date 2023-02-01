@@ -40,6 +40,12 @@ export class PokemonCatalogueService {
       .subscribe({
         next: (results: Results) => {
           this._pokemon = results.results;
+          results.results.forEach((element, index) => {
+            element.img =
+              'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
+              String(index + 1) +
+              '.png';
+          });
         },
         error: (error: HttpErrorResponse) => {
           this._error = error.message;
