@@ -4,7 +4,7 @@ export class StorageUtil {
         sessionStorage.setItem(key, JSON.stringify(value))
     }
     
-    public static storageRead<T>(key: string): T | null{
+    public static storageRead<T>(key: string): T | undefined{
         const storedValue = sessionStorage.getItem(key)
        
         try {
@@ -12,11 +12,11 @@ export class StorageUtil {
                 return JSON.parse(storedValue)
             }
             
-            return null
+            return undefined
             
         } catch (error) { //? If the data is invalid it needs to be removed...
             sessionStorage.removeItem(key)
-            return null
+            return undefined
         }
     }
 }
