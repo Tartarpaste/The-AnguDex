@@ -5,12 +5,15 @@ export class StorageUtil {
 
   public static storageRead<T>(key: string): T | undefined {
     const storedValue = sessionStorage.getItem(key);
+
     try {
       if (storedValue) {
-        return JSON.parse(storedValue) as T;
+        return JSON.parse(storedValue);
       }
+
       return undefined;
-    } catch (e) {
+    } catch (error) {
+      //? If the data is invalid it needs to be removed...
       sessionStorage.removeItem(key);
       return undefined;
     }

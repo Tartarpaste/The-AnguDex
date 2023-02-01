@@ -12,4 +12,8 @@ export class LoginPage {
   handleLogin(): void {
     this.router.navigateByUrl('/catalogue');
   }
+
+  handleLogin(): void {
+    this.router.navigateByUrl('/catalogue');
+  }
 }
