@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Pokemon, Results } from 'src/app/models/pokemon.model';
+import { Component, OnInit } from '@angular/core';
+import { Pokemon } from 'src/app/models/pokemon.model';
 import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.serv
   templateUrl: './catalogue.page.html',
   styleUrls: ['./catalogue.page.css']
 })
-export class CataloguePage {
+export class CataloguePage implements OnInit{
 
   get pokemon(): Pokemon[] {
     return this.pokemonCatalogueService.pokemon
