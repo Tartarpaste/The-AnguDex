@@ -10,11 +10,12 @@ import {HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 // Decorator
 @NgModule({ 
-  declarations: [AppComponent, LoginPage, CataloguePage, TrainerPage, LoginFormComponent, PokemonListComponent, PokemonListItemComponent],
+  declarations: [AppComponent, LoginPage, CataloguePage, TrainerPage, LoginFormComponent, PokemonListComponent, PokemonListItemComponent, NavbarComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
