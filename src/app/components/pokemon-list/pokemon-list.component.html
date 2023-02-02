@@ -1,5 +1,18 @@
-<ul>
-  <li *ngFor="let pokemon of PokemonList">
-    <span>{{ pokemon.name }} by <img [src]="pokemon.img" alt="lol" /></span>
-  </li>
+<ul class="flex flex-wrap">
+  <app-pokemon-list-item
+    *ngFor="let pokemon of PokemonList"
+    [pokemon]="pokemon"
+  ></app-pokemon-list-item>
 </ul>
+
+<!-- <li *ngFor="let pokemon of PokemonList">
+  <div
+    class="max-w-sm m-3 rounded overflow-hidden shadow-lg w-72 h-72 flex justify-center items-center"
+  >
+    <img class="w-40 h-40" [src]="pokemon.img" alt="Guess that pokemon!" />
+    <div class="text-center">
+      <div class="font-bold text-xl mb-2">{{ pokemon.name }}</div>
+      <p class="text-gray-700 text-base"></p>
+    </div>
+  </div>
+</li> -->

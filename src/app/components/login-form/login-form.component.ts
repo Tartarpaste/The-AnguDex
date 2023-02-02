@@ -22,8 +22,8 @@ export class LoginFormComponent {
 
     this.loginService.login(username).subscribe({
       //? If it goes well it will go to the "next" property
-      next: (user: Trainer) => {
-        this.trainerService.trainer = user;
+      next: (trainer: Trainer) => {
+        this.trainerService.trainer = trainer;
         this.login.emit();
       }, //? It will pass to error if something goes wrong
       error: () => {},
