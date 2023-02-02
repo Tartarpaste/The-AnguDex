@@ -7,7 +7,7 @@ import { Pokemon } from 'src/app/models/pokemon.model';
   styleUrls: ['./pokemon-list-item.component.css'],
 })
 export class PokemonListItemComponent implements OnInit {
-  @Input() pokemon!: Pokemon;
+  @Input() pokemon?: Pokemon;
 
   constructor() {}
 
