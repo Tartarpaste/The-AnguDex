@@ -1,6 +1,7 @@
 
 <ul>
-    <li *ngFor="let pokemon of PokemonList">
-        <span>{{pokemon.name}} by <img [src]="pokemon.img" alt="lol"></span>
-    </li>
+    <app-pokemon-list-item *ngFor="let pokemon of PokemonList" [pokemon]="pokemon" >
+
+    </app-pokemon-list-item>
+    
 </ul>
