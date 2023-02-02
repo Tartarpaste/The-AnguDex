@@ -5,10 +5,17 @@ export interface Results {
 }
 
 export interface Pokemon {
-    id : number
-    name : string
-    url : string
+    id: number
+    name: string
+    url: string
     img: string
 }
+
+export interface PokemonAttributes {
+    types: [key: number, slot: number, type: {name: string, url: string}]
+    weight: number
+}
+
+
 
 //? [index: number]: { id: number; label: string; key: any}

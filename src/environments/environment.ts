@@ -3,6 +3,7 @@ export const environment = {
     production: false,
     apiUsers: "https://glaze-thankful-wombat.glitch.me/trainers",
     apiPokemon: "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0",
+    apiPokemonAttributes: "https://pokeapi.co/api/v2/pokemon/",
     apiKey: "pyddeburger"
 };
 

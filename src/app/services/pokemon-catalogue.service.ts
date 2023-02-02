@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Pokemon, Results } from '../models/pokemon.model';
 import { finalize } from 'rxjs'
 
-const { apiPokemon } = environment;
+const { apiPokemon, apiPokemonAttributes } = environment;
 
 @Injectable({
   providedIn: 'root',
@@ -40,7 +40,11 @@ export class PokemonCatalogueService {
       next: (results: Results) => {
         this._pokemon = results.results
         results.results.forEach((element, index) => {
-          element.img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + String(index + 1) + ".png"
+          element.id = index + 1
+          console.log(element.id);
+          
+          element.name = element.name.toUpperCase()
+          element.img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + String(index + 1) + ".png"          
         });
       },
       error: (error: HttpErrorResponse) => {
@@ -48,4 +52,9 @@ export class PokemonCatalogueService {
       },
     });
   }
+
+  public pokemonByID(id: number): Pokemon | undefined {
+    return this._pokemon.find((pokemon: Pokemon) => pokemon.id === id )  
+  }
+
 }
