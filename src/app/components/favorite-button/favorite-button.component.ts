@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { Trainer } from 'src/app/models/trainer.model';
 import { FavoriteService } from 'src/app/services/favorite.service';
+import { TrainerService } from 'src/app/services/trainer.service';
 
 @Component({
   selector: 'app-favorite-button',
@@ -10,6 +11,9 @@ import { FavoriteService } from 'src/app/services/favorite.service';
 })
 export class FavoriteButtonComponent implements OnInit{
 
+  public pokeBallImage = ""
+  public isCaught: boolean = false
+
   @Input() pokemonID?: number = 0
   
   get loading(): boolean {
@@ -17,10 +21,13 @@ export class FavoriteButtonComponent implements OnInit{
   }
 
   constructor(
+    private trainerService: TrainerService,
     private readonly favoriteService: FavoriteService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isCaught = this.trainerService.inFavorites(this.pokemonID!)
+  }
 
   onClickCatch(): void {
     this.favoriteService.addToFavorites(this.pokemonID!)
