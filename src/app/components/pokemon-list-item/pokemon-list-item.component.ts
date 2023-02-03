@@ -12,4 +12,8 @@ export class PokemonListItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onPokemonCatch(): void {
+    alert('caught ' + this.pokemon?.name + '!');
+  }
 }

@@ -41,6 +41,10 @@ export class PokemonCatalogueService {
         next: (results: Results) => {
           this._pokemon = results.results;
           results.results.forEach((element, index) => {
+            element.name =
+              element.name.charAt(0).toLocaleUpperCase() +
+              element.name.slice(1);
+            element.id = index + 1;
             element.img =
               'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
               String(index + 1) +
