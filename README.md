@@ -1,6 +1,6 @@
 <p align="center">
   <a href="">
-    <img src="pikachu.png" alt="Logo" width=72 height=80>
+    <img src="pikachu.png" alt="Logo" width=72 height=72>
   </a>
 
   <h3 align="center">Lost in Translation</h3>
