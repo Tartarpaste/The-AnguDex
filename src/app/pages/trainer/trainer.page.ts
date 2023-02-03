@@ -6,29 +6,24 @@ import { TrainerService } from 'src/app/services/trainer.service';
 @Component({
   selector: 'app-trainer',
   templateUrl: './trainer.page.html',
-  styleUrls: ['./trainer.page.css']
+  styleUrls: ['./trainer.page.css'],
 })
 export class TrainerPage {
-
-  name: string
+  name: string;
 
   get trainer(): Trainer | undefined {
-    return this.trainerService.trainer
+    return this.trainerService.trainer;
   }
 
   get pokemons(): Pokemon[] {
     if (this.trainerService.trainer) {
-      return this.trainerService.trainer.pokemons
+      return this.trainerService.trainer.pokemons;
     }
 
-    return []
+    return [];
   }
 
-  constructor(
-    private trainerService: TrainerService,
-    
-  ) {
-    this.name = trainerService.trainer!.username
+  constructor(private trainerService: TrainerService) {
+    this.name = trainerService.trainer!.username;
   }
-
 }
