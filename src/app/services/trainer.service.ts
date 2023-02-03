@@ -21,6 +21,11 @@ export class TrainerService {
     this._trainer = trainer
   }
 
+  public removeTrainer(trainer: Trainer | undefined){
+    StorageUtil.storageRemove<Trainer>(StorageKeys.Trainer)
+    this._trainer = trainer
+  }
+
   public inFavorites(pokemonId: number): boolean {
     if (this.trainer){
     return Boolean(this.trainer?.pokemons.find((pokemon: Pokemon) => pokemon.id === pokemonId))

@@ -10,6 +10,8 @@ import { TrainerService } from 'src/app/services/trainer.service';
 })
 export class TrainerPage {
 
+  name: string
+
   get trainer(): Trainer | undefined {
     return this.trainerService.trainer
   }
@@ -23,7 +25,10 @@ export class TrainerPage {
   }
 
   constructor(
-    private trainerService: TrainerService
-  ) {}
+    private trainerService: TrainerService,
+    
+  ) {
+    this.name = trainerService.trainer!.username
+  }
 
 }

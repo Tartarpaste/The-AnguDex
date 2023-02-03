@@ -5,11 +5,14 @@
     </span>
     <ng-container *ngIf="trainer !== undefined">
     <ul class="flex">
-        <li class="px-4">
+        <li class="">
             <a class="font-semibold hover:text-gray-600 active:text-gray-900" routerLink="/catalogue">CATALOGUE</a>
         </li>
-        <li>
+        <li class="px-4">
             <a class="font-semibold hover:text-gray-600 active:text-gray-900" routerLink="/trainer">TRAINER</a>
+        </li>
+        <li>
+            <a (click)="handleLogOut()" class="font-semibold hover:text-gray-600 active:text-gray-900" routerLink="/login">LOGOUT</a>
         </li>
     </ul>
     </ng-container>
