@@ -37,7 +37,7 @@ You will need npm and Node.js, this can be done through here: [Download npm and 
 You can run the project with these commands:
 
 `npm install`
-`ng serve
+`ng serve`
 
 ### Tools Used
 
