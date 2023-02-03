@@ -11,7 +11,7 @@ import { TrainerService } from 'src/app/services/trainer.service';
 })
 export class LoginFormComponent {
 
-  @Output() login: EventEmitter<void> = new EventEmitter()
+@Output() login: EventEmitter<void> = new EventEmitter()
 
   constructor(
     private readonly loginService: LoginService,
@@ -34,5 +34,4 @@ export class LoginFormComponent {
       }
     })
   }
-
 }
