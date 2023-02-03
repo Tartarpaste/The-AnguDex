@@ -5,7 +5,6 @@ import { environment } from 'src/environments/environment';
 import { Trainer } from '../models/trainer.model';
 import { map, Observable } from 'rxjs';
 
-
 const { apiUsers, apiKey } = environment
 
 @Injectable({

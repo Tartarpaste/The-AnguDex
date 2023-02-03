@@ -19,6 +19,7 @@ import { FavoriteButtonComponent } from './components/favorite-button/favorite-b
 @NgModule({ 
   declarations: [AppComponent, LoginPage, CataloguePage, TrainerPage, LoginFormComponent, PokemonListComponent, PokemonListItemComponent, NavbarComponent, PokemonAttributesComponent, FavoriteButtonComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+
   providers: [],
   bootstrap: [AppComponent],
 })
