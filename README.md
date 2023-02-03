@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://example.com/">
+  <a href="">
     <img src="pikachu.png" alt="Logo" width=72 height=102>
   </a>
 
