@@ -16,6 +16,4 @@ export interface PokemonAttributes {
     weight: number
 }
 
-
-
 //? [index: number]: { id: number; label: string; key: any}

@@ -32,4 +32,17 @@ export class TrainerService {
   constructor() { 
     this._trainer = StorageUtil.storageRead<Trainer>(StorageKeys.Trainer)
   }
+
+  public addToCaughtPokemon(pokemon: Pokemon): void {
+    if (this._trainer){
+      this._trainer.pokemons.push(pokemon)
+    } 
+  }
+
+  public removeFromCaughtPokemon(pokemonID: number): void {
+     if (this._trainer) {
+      this._trainer.pokemons = this._trainer.pokemons.filter((pokemon: Pokemon) => pokemon.id !== pokemonID)
+      alert("You have freed the pokemon!")
+     }
+  }
 }

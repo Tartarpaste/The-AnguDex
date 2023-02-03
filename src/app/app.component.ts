@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PokemonCatalogueService } from './services/pokemon-catalogue.service';
+import { TrainerService } from './services/trainer.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'The-AnguDex';
+
+  constructor(
+    private readonly trainerService: TrainerService,
+    private readonly pokemonCatalogueService: PokemonCatalogueService
+  ){}
+  
+    ngOnInit(): void {
+      if (this.trainerService.trainer){
+        this.pokemonCatalogueService.findAllPokemon
+      }
+    }
+
 }

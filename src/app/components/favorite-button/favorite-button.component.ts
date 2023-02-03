@@ -32,9 +32,8 @@ export class FavoriteButtonComponent implements OnInit{
   onClickCatch(): void {
     this.favoriteService.addToFavorites(this.pokemonID!)
     .subscribe({
-      next: (response: Trainer) => {
-        console.log("NEXT", response);
-
+      next: (trainer: Trainer) => {
+        this.isCaught = this.trainerService.inFavorites(this.pokemonID!)
       },
       error: (error: HttpErrorResponse) => {
         console.log("ERROR", error.message)
