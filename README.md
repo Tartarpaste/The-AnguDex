@@ -58,7 +58,7 @@ clone the repo like this:
 
 It is also possible to download the repo as a .zip.
 
-## Creators (Credits)
+## Creators
 
 **Creator 1**
 
