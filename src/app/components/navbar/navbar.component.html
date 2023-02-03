@@ -4,11 +4,19 @@
   <span class="font-bold"> The AnguDex! </span>
   <ng-container *ngIf="trainer !== undefined">
     <ul class="flex">
-      <li>
-        <a routerLink="/catalogue">Pokemon Catalogue</a>
+      <li class="px-4">
+        <a
+          class="font-semibold hover:text-gray-600 active:text-gray-900"
+          routerLink="/catalogue"
+          >CATALOGUE</a
+        >
       </li>
       <li>
-        <a routerLink="/trainer">Trainer</a>
+        <a
+          class="font-semibold hover:text-gray-600 active:text-gray-900"
+          routerLink="/trainer"
+          >TRAINER</a
+        >
       </li>
     </ul>
   </ng-container>

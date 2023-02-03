@@ -10,4 +10,9 @@ export interface Pokemon {
   img: string;
 }
 
+export interface PokemonAttributes {
+  types: [key: number, slot: number, type: { name: string; url: string }];
+  weight: number;
+}
+
 //? [index: number]: { id: number; label: string; key: any}

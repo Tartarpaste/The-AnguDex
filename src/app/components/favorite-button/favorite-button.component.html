@@ -1,0 +1,14 @@
+<button type="button" class=" w-40 h-12 text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-800 dark:bg-white dark:border-gray-700 dark:text-gray-900 dark:hover:bg-gray-200 mr-2 mb-2" (click)="onClickCatch()">
+
+    <ng-container *ngIf="isCaught; then caught else notCaught" class=""></ng-container>
+
+    <ng-template #caught>
+        <img class="h-10 w-10 p-2" src="assets/pokeball.png" alt="pokeball">
+        Caught
+    </ng-template>
+    <ng-template #notCaught class="flex">
+        <img class="h-10 w-10 p-2" src="assets/openPokeball.png" alt="pokeball">
+        <p>CATCH</p>
+    </ng-template>
+
+</button>

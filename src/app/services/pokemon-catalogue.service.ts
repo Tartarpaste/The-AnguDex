@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Pokemon, Results } from '../models/pokemon.model';
 import { finalize } from 'rxjs';
 
-const { apiPokemon } = environment;
+const { apiPokemon, apiPokemonAttributes } = environment;
 
 @Injectable({
   providedIn: 'root',
@@ -55,5 +55,9 @@ export class PokemonCatalogueService {
           this._error = error.message;
         },
       });
+  }
+
+  public pokemonByID(id: number): Pokemon | undefined {
+    return this._pokemon.find((pokemon: Pokemon) => pokemon.id === id);
   }
 }
