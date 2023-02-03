@@ -29,6 +29,13 @@ export class PokemonCatalogueService {
   constructor(private readonly http: HttpClient) {}
 
   public findAllPokemon(): void {
+
+    //? This line fixes the double fetch issue 
+    //? and not loading from api every time when using the Navbar
+    if (this._pokemon.length > 0 || this.loading) {
+      return
+    }
+
     this._loading = true;
     this.http
       .get<Results>(apiPokemon)

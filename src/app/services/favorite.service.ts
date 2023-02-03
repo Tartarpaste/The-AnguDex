@@ -40,18 +40,20 @@ export class FavoriteService {
     }
 
     if (this.trainerService.inFavorites(id)) {
-      throw new Error("Pokemon with Id: " + id + " is already caught")
+      this.trainerService.removeFromCaughtPokemon(id)
+    } else {
+      this.trainerService.addToCaughtPokemon(pokemon)
     }
-
+  
     const headers = new HttpHeaders({
       'content-type': 'application/json',
       'x-api-key': apiKey
     })
     
-     
+     this._loading = true
 
     return this.http.patch<Trainer>(`${apiUsers}/${trainer.id}`, {
-      pokemons: [...trainer.pokemons, pokemon]
+      pokemons: [...trainer.pokemons]
     }, {
       headers
     })
