@@ -1,14 +1,14 @@
-<button type="button" class=" w-40 h-12 text-gray-900 bg-slate-300 hover:bg-slate-500 border font-medium rounded-lg text-center inline-flex items-center  mb-2" (click)="onClickCatch()">
+<button type="button" class=" w-20 h-7 justify-center mx-auto text-gray-900 bg-slate-300 hover:bg-slate-200 border font-medium rounded-lg inline-flex items-center" (click)="onClickCatch()">
 
-    <ng-container *ngIf="isCaught; then caught else notCaught" class=""></ng-container>
+    <ng-container *ngIf="isCaught; then caught else notCaught" class="items-center"></ng-container>
 
-    <ng-template #caught class="flex self-center">
-        <img class="h-10 w-10 p-2" src="assets/pokeball.png" alt="pokeball">
-        <p>Caught</p>
+    <ng-template #caught class="">
+        <img class="h-3 w-3 mr-2" src="assets/pokeball.png" alt="pokeball">
+        <p class="text-xs">Release</p>
     </ng-template>
-    <ng-template #notCaught class="flex">
-        <img class="h-10 w-10 p-2" src="assets/openPokeball.png" alt="pokeball">
-        <p>Catch</p>
+    <ng-template #notCaught class="">
+        <img class="h-3 w-3 mr-2" src="assets/openPokeball.png" alt="pokeball">
+        <p class="text-xs">Catch</p>
     </ng-template>
 
 </button>
