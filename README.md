@@ -3,10 +3,10 @@
     <img src="pikachu.png" alt="Logo" width=72 height=72>
   </a>
 
-  <h3 align="center">Lost in Translation</h3>
+  <h3 align="center">AnguDex</h3>
 
   <p align="center">
-    Translate English words to Sign Language
+    Catch your favorite Pokemon from a list of 100 Pokemon
   </p>
 </p>
 
